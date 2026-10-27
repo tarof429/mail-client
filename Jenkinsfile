@@ -19,7 +19,7 @@ pipeline {
 
                         def imageName = "tarof429/mail-client:${env.IMAGE_TAG}"
 
-                        def myImage = docker.build(imageName, "-f docker/Dockerfile .")
+                        def myImage = docker.build(imageName, ".")
 
                         myImage.push()
                     }
